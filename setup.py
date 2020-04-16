@@ -26,7 +26,7 @@ def get_install_requires():
 
 if sys.argv[-1] == 'publish':
     # delete any *.pyc, *.pyo and __pycache__
-    os.system('find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf')
+    os.system('find . | grep -E "(__pycache__$)" | xargs rm -rf')
     os.system("python setup.py sdist bdist_wheel")
     os.system("twine upload -s dist/*")
     os.system("rm -rf dist build")

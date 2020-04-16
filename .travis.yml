@@ -19,11 +19,12 @@ install:
   - pip install -U pip wheel setuptools
   - pip install -r requirements.txt
   - pip install -r requirements-test.txt
+  - pip install -e .
 
 script:
   - ./runflake8
   - ./runisort
-  - coverage run --source=iris_dataset_classifier test.py
+  - coverage run --source=iris_dataset_classifier iris_dataset_classifier/tests/test_classifier.py
 
 after_success:
   coveralls

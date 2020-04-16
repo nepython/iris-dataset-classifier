@@ -1,9 +1,8 @@
 # IRIS DATASET CLASSIFIER
 
 [![Build Status](https://travis-ci.org/nepython/iris-dataset-classifier.svg?branch=master)](https://travis-ci.org/github/nepython/iris-dataset-classifier)
-
 [![Coverage Status](https://coveralls.io/repos/github/nepython/iris-dataset-classifier/badge.svg?branch=master)](https://coveralls.io/github/openwisp/openwisp-monitoring?branch=master)
-
+[![Requirements Status](https://requires.io/github/nepython/iris-dataset-classifier/requirements.svg?branch=master)](https://requires.io/github/nepython/iris-dataset-classifier/requirements/?branch=master)
 ### [WIP] Check back in a while
 
 **It aims to classify given IRIS data into it's three species namely:**

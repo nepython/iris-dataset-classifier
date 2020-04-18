@@ -3,7 +3,6 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
 
 # Described path here inorder to avoid path conflicts
 col = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'Name']
@@ -21,10 +20,15 @@ class DatasetClassifier():
     # Displays plots comparing the 3 species across all 4 features
     # Not required for the task
     def compare_all_species_per_feature(self):
-        sns.FacetGrid(iris, hue='Name', size=3).map(sns.distplot, 'petal_length').add_legend()
-        sns.FacetGrid(iris, hue='Name', size=3).map(sns.distplot, 'petal_width').add_legend()
-        sns.FacetGrid(iris, hue='Name', size=3).map(sns.distplot, 'sepal_length').add_legend()
-        sns.FacetGrid(iris, hue='Name', size=3).map(sns.distplot, 'sepal_width').add_legend()
+        plt.style.use('ggplot')
+        features = ['petal_length', 'petal_width', 'sepal_length', 'sepal_width']
+        for feature in features:
+            f = plt.figure(feature)
+            plt.hist(iris[feature].to_numpy()[:50], bins=10, color='black', label='setosa')
+            plt.hist(iris[feature].to_numpy()[50:100], bins=10, color='darkblue', label='versicolor')
+            plt.hist(iris[feature].to_numpy()[100:150], bins=10, color='green', label='virginica')
+            plt.legend()
+            f.show()
         plt.show()
 
     def plot_iris_setosa(self):

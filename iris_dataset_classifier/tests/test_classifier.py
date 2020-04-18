@@ -22,9 +22,13 @@ print(iris.describe())
 class TestClassifier(TestCase):
 
     @mock.patch('iris_dataset_classifier.classifier.plt.show')
-    def test_compare_all_species_per_feature(self, mock):
+    @mock.patch('iris_dataset_classifier.classifier.plt.hist')
+    @mock.patch('iris_dataset_classifier.classifier.plt.legend')
+    def test_compare_all_species_per_feature(self, mock_legend, mock_hist, mock_plot):
         DatasetClassifier().compare_all_species_per_feature()
-        self.assertEqual(mock.call_count, 1)
+        self.assertEqual(mock_legend.call_count, 4)
+        self.assertEqual(mock_hist.call_count, 12)
+        self.assertEqual(mock_plot.call_count, 1)
 
     @mock.patch('iris_dataset_classifier.classifier.plt.show')
     def test_plot_iris_setosa(self, mock):

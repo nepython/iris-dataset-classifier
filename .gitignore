@@ -1,3 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+/*/basic_neural_network.py
+
+# Distribution / packaging
+.Python
 venv
 .coverage
 .vscode
+*.egg-info/
+.installed.cfg
+*.egg

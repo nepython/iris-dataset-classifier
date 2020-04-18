@@ -27,4 +27,5 @@ script:
   - coverage run --source=iris_dataset_classifier iris_dataset_classifier/tests/test_classifier.py
 
 after_success:
-  coveralls
+  # Adding a few tests
+  # coveralls

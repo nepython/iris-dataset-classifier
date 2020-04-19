@@ -1,9 +1,0 @@
-README.md
-setup.cfg
-setup.py
-iris_datset_classifier.egg-info/PKG-INFO
-iris_datset_classifier.egg-info/SOURCES.txt
-iris_datset_classifier.egg-info/dependency_links.txt
-iris_datset_classifier.egg-info/not-zip-safe
-iris_datset_classifier.egg-info/requires.txt
-iris_datset_classifier.egg-info/top_level.txt
